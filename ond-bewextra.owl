@@ -1,1 +1,211 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/openeed/ond-bewextra#"
+     xml:base="http://purl.org/openeed/ond-bewextra"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.org/openeed/ond-bewextra">
+        <owl:versionIRI rdf:resource="http://purl.org/openeed/ond-bewextra/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#hasApprovalRate -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/openeed/ond-bewextra#hasApprovalRate">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/openeed/ond-bewextra#ApprovalRate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#hasBNPI -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/openeed/ond-bewextra#hasBNPI">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/openeed/ond-bewextra#BewextraNeedPriorityIndex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#hasExternalViewBNPI -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/openeed/ond-bewextra#hasExternalViewBNPI">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/openeed/ond-bewextra#hasBNPI"/>
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/openeed/ond-bewextra#ExternalViewBNPI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#hasInternalViewBNPI -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/openeed/ond-bewextra#hasInternalViewBNPI">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/openeed/ond-bewextra#hasBNPI"/>
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/openeed/ond-bewextra#OveralBNPI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#hasOveralBNPI -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/openeed/ond-bewextra#hasOveralBNPI">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/openeed/ond-bewextra#hasBNPI"/>
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/openeed/ond-bewextra#InternalViewBNPI"/>
+        <rdfs:range rdf:resource="http://purl.org/openeed/ond-bewextra#OveralBNPI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#relatesTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/openeed/ond-bewextra#relatesTo">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#HumanRequirement"/>
+        <rdfs:range rdf:resource="http://purl.org/openeed/ond-bewextra#Workshop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/openeed/ond-bewextra#date">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#Workshop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/openeed/ond-bewextra#hasValue">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#ApprovalRate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#numberOfCodes -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/openeed/ond-bewextra#numberOfCodes">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#Workshop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#numberOfParticipants -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/openeed/ond-bewextra#numberOfParticipants">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#Workshop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#numberOfSatisfiers -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/openeed/ond-bewextra#numberOfSatisfiers">
+        <rdfs:domain rdf:resource="http://purl.org/openeed/ond-bewextra#Workshop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#ApprovalRate -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#ApprovalRate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/openeed/ond-bewextra#Metric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#BewextraNeedPriorityIndex -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#BewextraNeedPriorityIndex">
+        <rdfs:subClassOf rdf:resource="http://purl.org/openeed/ond-bewextra#Metric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#ExternalViewBNPI -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#ExternalViewBNPI">
+        <rdfs:subClassOf rdf:resource="http://purl.org/openeed/ond-bewextra#BewextraNeedPriorityIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#HumanRequirement -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#HumanRequirement"/>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#InternalViewBNPI -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#InternalViewBNPI">
+        <rdfs:subClassOf rdf:resource="http://purl.org/openeed/ond-bewextra#BewextraNeedPriorityIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#Metric -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#Metric"/>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#OveralBNPI -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#OveralBNPI">
+        <rdfs:subClassOf rdf:resource="http://purl.org/openeed/ond-bewextra#BewextraNeedPriorityIndex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/openeed/ond-bewextra#Workshop -->
+
+    <owl:Class rdf:about="http://purl.org/openeed/ond-bewextra#Workshop"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
